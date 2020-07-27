@@ -24,3 +24,25 @@ body {
 
     margin-top: 50px;
 }
+
+.inner.result {
+
+    color: white;
+}
+
+.inner.result ul {
+
+    padding: 20px 0;
+}
+
+.inner.result ul li {
+
+    list-style: none;
+}
+
+.inner.result ul li span {
+
+    font-size: 20px;
+    font-weight: bold;
+    color: cadetblue;
+}

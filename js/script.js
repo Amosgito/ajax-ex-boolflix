@@ -11,6 +11,10 @@ function sendRequest() {
 
     console.log("title:", titleVal);
 
+    var template = $('#film-template').html();
+    var compiled = Handlebars.compile(template);
+    var target = $('#append-list');
+
     $.ajax({
 
         url: "https://api.themoviedb.org/3/search/movie",
@@ -21,19 +25,26 @@ function sendRequest() {
         method: "GET",
         success: function (data) {
 
-            var success = data["success"];
-            var results = data["results"];
-            var title = results[0]["title"];
-            var origTitle = results[0]["original_title"];
-            var language = results[0]["original_language"];
-            var vote = results[0]["vote_average"];
+            var result = data["results"];
+            console.log("result:", result);
 
-            console.log("result:", results);
-            console.log("title:", title);
-            console.log("original title:", origTitle);
-            console.log("language:", language);
-            console.log("vote:", vote);
+            for(var i = 0; i < result.length; i++) {
+                
+                var title = result[i]["title"];
+                var origTitle = result[i]["original_title"];
+                var language = result[i]["original_language"];
+                var vote = result[i]["vote_average"];
 
+                var listHtml = compiled({
+
+                    "title": title,
+                    "originalT": origTitle,
+                    "lang": language,
+                    "vote": vote
+                })
+
+                target.append(listHtml);
+            }
             
         },
 
@@ -44,8 +55,6 @@ function sendRequest() {
     })
 
 }
-
-
 
 
 function init () {
