@@ -22,12 +22,19 @@ function sendRequest() {
         success: function (data) {
 
             var success = data["success"];
-            var response = data["response"];
+            var results = data["results"];
+            var title = results[0]["title"];
+            var origTitle = results[0]["original_title"];
+            var language = results[0]["original_language"];
+            var vote = results[0]["vote_average"];
 
-            if(success) {
+            console.log("result:", results);
+            console.log("title:", title);
+            console.log("original title:", origTitle);
+            console.log("language:", language);
+            console.log("vote:", vote);
 
-                console.log("result:", response);
-            }
+            
         },
 
         error: function (err) {
