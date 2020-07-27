@@ -1,0 +1,26 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+
+    background-color: darkslategray;
+    margin: auto;
+    width: 100vw;
+    height: 100vh;
+}
+
+.container {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inner {
+
+    margin-top: 50px;
+}
