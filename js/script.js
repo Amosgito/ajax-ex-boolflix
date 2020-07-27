@@ -13,9 +13,10 @@ function sendRequest() {
 
     $.ajax({
 
-        url: "https://api.themoviedb.org/3/movie/550?api_key=c2288f003510b1c242783a71ec02e712",
+        url: "https://api.themoviedb.org/3/search/movie",
         data: {
-            "title": titleVal
+            "api_key": "c2288f003510b1c242783a71ec02e712",
+            "query": titleVal
         },
         method: "GET",
         success: function (data) {
@@ -25,10 +26,7 @@ function sendRequest() {
 
             if(success) {
 
-                console.log("result", response);
-            }else {
-
-                console.log("broken");
+                console.log("result:", response);
             }
         },
 
