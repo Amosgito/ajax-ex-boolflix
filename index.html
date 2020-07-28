@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="css\style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script> 
 
     <script id="film-template" type="text/x-handlebars-template">
-        <ul>
-            <li><span>Title: </span> {{title}}</li>
-            <li><span>Original Title: </span> {{originalT}}</li>
-            <li><span>Language: </span>{{lang}}</li>
-            <li><span>Vote: </span>{{vote}}</li>
+        <ul class="f32">
+            <li><span>Title: </span> {{ title }}</li>
+            <li><span>Original Title: </span> {{ original_title }}</li>
+            <li><span>Language: </span> <p class="flag"></p> {{ original_language }}</li>
+            <li><span>Vote: </span>{{ vote_average }}</li>
+            <li><i class="star1 far fa-star"></i><i class="star2 far fa-star"></i><i class="star3 far fa-star"></i><i class="star4 far fa-star"></i><i class="star5 far fa-star"></i></li>
         </ul>
     </script>
 
