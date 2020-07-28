@@ -85,7 +85,7 @@ function sendRequest() {
                     $(".flag").addClass("de");
                 }
 
-                stars(voteRound, compiled);
+                stars(voteRound);
             }
 
         },
@@ -99,7 +99,7 @@ function sendRequest() {
 
 }
 
-function stars (vote, compiled) {
+function stars (vote) {
 
     if(vote === 1) {
 
@@ -112,34 +112,18 @@ function stars (vote, compiled) {
        $(".star1.star2").addClass("fas fa-star");
     } else if(vote === 3) {
 
-        var listHtml = compiled({
-
-            "star1": '<i class="fas fa-star"></i>',
-            "star2": '<i class="fas fa-star"></i>',
-            "star3": '<i class="fas fa-star"></i>'
-        })
+       $(".star1.star2.star3").removeClass("far fa-star");
+       $(".star1.star2.star3").addClass("fas fa-star");
     } else if(vote === 4) {
 
-        var listHtml = compiled({
-
-            "star1": '<i class="fas fa-star"></i>',
-            "star2": '<i class="fas fa-star"></i>',
-            "star3": '<i class="fas fa-star"></i>',
-            "star4": '<i class="fas fa-star"></i>'
-        })
+        $(".star1.star2.star3.star4").removeClass("far fa-star");
+        $(".star1.star2.star3.star4").addClass("fas fa-star");
     } else if(vote === 5) {
 
-        var listHtml = compiled({
-
-            "star1": '<i class="fas fa-star"></i>',
-            "star2": '<i class="fas fa-star"></i>',
-            "star3": '<i class="fas fa-star"></i>',
-            "star4": '<i class="fas fa-star"></i>',
-            "star5": '<i class="fas fa-star"></i>'
-        })
+        $(".star1.star2.star3.star4.star5").removeClass("far fa-star");
+        $(".star1.star2.star3.star4.star5").addClass("fas fa-star");
     }
 
-    return listHtml
 }
 
 
