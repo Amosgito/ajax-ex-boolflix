@@ -49,9 +49,9 @@ function sendRequest() {
                 var vote_average = result[i]["vote_average"];
                 var voteHalf = vote_average / 2;
                 var voteRound = Math.round(voteHalf);
-                var voteRoundForHandlebars;
+                var voteRoundForHandlebars = "";
 
-                for(var i =0; i <= voteRound; i++) {
+                for(var k =0; k <= voteRound; k++) {
 
                    voteRoundForHandlebars += '<i class="fas fa-star"></i>';
                 }
