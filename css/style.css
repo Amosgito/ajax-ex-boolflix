@@ -7,9 +7,9 @@
 
 body {
 
-    background-color: darkslategray;
+    background-color: rgb(61, 68, 68);
     margin: auto;
-    width: 100vw;
+    width: 85vw;
     height: 100vh;
 }
 
@@ -22,25 +22,42 @@ body {
 
 .inner {
 
+    height: 70px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: center;
+    background-color: black;
+}
+
+.inner h1 {
+
+    color: red;
+}
+
+.result {
+
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
     margin-top: 50px;
 }
 
-.inner.result {
-
-    color: white;
-}
-
-.inner.result ul {
+.result ul {
 
     padding: 20px 0;
+    margin: 50px;
+    width: 300px;
 }
 
-.inner.result ul li {
+.result ul li {
 
     list-style: none;
 }
 
-.inner.result ul li span {
+.result ul li span {
 
     font-size: 20px;
     font-weight: bold;

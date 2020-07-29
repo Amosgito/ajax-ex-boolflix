@@ -48,6 +48,7 @@ function sendRequest() {
                 var original_language = result[i]["original_language"];
                 var vote_average = result[i]["vote_average"];
                 var poster_path = result[i]["poster_path"];
+                var overview = result[i]["overview"];
 
                 // SETS VOTE BASE FROM DECIMAL TO 5RADIX
                 var voteHalf = vote_average / 2;
@@ -73,7 +74,8 @@ function sendRequest() {
                     "original_title": original_title,
                     "original_language": origLangImg,
                     "vote_average": voteRoundFor,
-                    "poster_path": postPathImg
+                    "poster_path": postPathImg,
+                    "overview": overview
                 })
 
 
@@ -123,6 +125,7 @@ function sendRequestSeries() {
                 var original_language = result[j]["original_language"];
                 var vote_average = result[j]["vote_average"];
                 var poster_path = result[j]["poster_path"];
+                var overview = result[j]["overview"];
 
                 // SETS VOTE BASE FROM DECIMAL TO 5RADIX
                 var voteHalf = vote_average / 2;
@@ -149,7 +152,8 @@ function sendRequestSeries() {
                     "original_name": original_title,
                     "original_language": origLangImg,
                     "vote_average": voteRoundFor,
-                    "poster_path": postPathImg
+                    "poster_path": postPathImg,
+                    "overview": overview
                 })
 
 

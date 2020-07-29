@@ -13,26 +13,28 @@
     <!-- SCRIPT HANDLEBARS MOVIES -->
     <script id="film-template" type="text/x-handlebars-template">
         <ul>
-            <li><span>Title: </span> {{ title }}</li>
             <div>{{{poster_path}}}</div>
+            <li><span>Title: </span> {{ title }}</li>
             <li><span>Original Title: </span> {{ original_title }}</li>
             <li><span>Language: </span> {{{ original_language }}} </li>
             <li><span>Vote: </span>{{{ vote_average }}}</li>
+            <li><span>Overview: </span>{{{ overview }}}</li>
         </ul>
-        <hr>
+        
 
     </script>
 
      <!-- SCRIPT HANDLEBARS TV-SERIES -->
     <script id="series-template" type="text/x-handlebars-template">
         <ul>
-            <li><span>Title: </span> {{ name }}</li>
             <div>{{{poster_path}}}</div>
+            <li><span>Title: </span> {{ name }}</li>
             <li><span>Original Title: </span> {{ original_name }}</li>
             <li><span>Language: </span> {{{ original_language }}} </li>
             <li><span>Vote: </span>{{{ vote_average }}}</li>
+            <li><span>Overview: </span>{{{ overview }}}</li>
         </ul>
-        <hr>
+        
     </script>
 
     <script src="js\script.js"></script>
@@ -42,11 +44,14 @@
     <div class="container">
 
         <div class="inner">
-            <input id="input" type="text" placeholder="Film Title">
-            <button id="btn" type="button" class="btn">SEARCH</button>
+            <h1>BOOLFLIX</h1>
+            <div>
+                <input id="input" type="text" placeholder="Film Title">
+                <button id="btn" type="button" class="btn">SEARCH</button>
+            </div>
         </div>
 
-        <div id="append-list" class="inner result">
+        <div id="append-list" class="result">
             
         </div>
 
