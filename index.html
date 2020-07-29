@@ -15,7 +15,16 @@
         <ul class="f32">
             <li><span>Title: </span> {{ title }}</li>
             <li><span>Original Title: </span> {{ original_title }}</li>
-            <li><span>Language: </span> <p class="flag"></p> {{ original_language }}</li>
+            <li><span>Language: </span> {{{ original_language }}} </li>
+            <li><span>Vote: </span>{{{ vote_average }}}</li>
+        </ul>
+    </script>
+
+    <script id="series-template" type="text/x-handlebars-template">
+        <ul class="f32">
+            <li><span>Title: </span> {{ name }}</li>
+            <li><span>Original Title: </span> {{ original_name }}</li>
+            <li><span>Language: </span> {{{ original_language }}} </li>
             <li><span>Vote: </span>{{{ vote_average }}}</li>
         </ul>
     </script>
