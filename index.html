@@ -5,23 +5,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- <link rel="stylesheet" type="text/css" href="//github.com/downloads/lafeber/world-flags-sprite/flags32.css" /> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <link rel="stylesheet" href="css\style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
 
     <script id="film-template" type="text/x-handlebars-template">
-        <ul class="f32">
+        <div>{{{poster_path}}}</div>
+        <ul>
             <li><span>Title: </span> {{ title }}</li>
             <li><span>Original Title: </span> {{ original_title }}</li>
             <li><span>Language: </span> {{{ original_language }}} </li>
             <li><span>Vote: </span>{{{ vote_average }}}</li>
         </ul>
+
     </script>
 
     <script id="series-template" type="text/x-handlebars-template">
-        <ul class="f32">
+        <div>{{{poster_path}}}</div>
+        <ul>
             <li><span>Title: </span> {{ name }}</li>
             <li><span>Original Title: </span> {{ original_name }}</li>
             <li><span>Language: </span> {{{ original_language }}} </li>
@@ -41,10 +43,12 @@
         </div>
 
         <div id="append-list" class="inner result">
-
+            
         </div>
 
     </div>
 </body>
 
 </html>
+
+<img src="" alt="">

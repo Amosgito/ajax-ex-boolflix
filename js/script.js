@@ -52,14 +52,20 @@ function sendRequest() {
                 var original_title = result[i]["original_title"];
                 var original_language = result[i]["original_language"];
                 var vote_average = result[i]["vote_average"];
+                var poster_path = result[i]["poster_path"];
                 var voteHalf = vote_average / 2;
                 var voteRound = Math.round(voteHalf);
-                var voteRoundForHandlebars = "";
+                var voteRoundFor = "";
                 var origLangImg =  '<img src="img/' + original_language + '.png" alt="' + original_language + '">';
+                var postPathImg = '<img src="https://image.tmdb.org/t/p/w185' + poster_path + '" alt="">'
+
+                console.log(poster_path);
+                console.log(postPathImg);
+                console.log(origLangImg);
 
                 for(var k =1; k <= voteRound; k++) {
 
-                   voteRoundForHandlebars += '<i class="fas fa-star"></i>';
+                   voteRoundFor += '<i class="fas fa-star"></img>';
                 }
 
                 var listHtml = compiled({
@@ -67,7 +73,8 @@ function sendRequest() {
                     "title": title,
                     "original_title": original_title,
                     "original_language": origLangImg,
-                    "vote_average": voteRoundForHandlebars
+                    "vote_average": voteRoundFor,
+                    "poster_path": postPathImg
                 })
 
 
@@ -109,7 +116,7 @@ function sendRequestSeries() {
 
             var result = data["results"];
 
-            for (var i = 0; i < result.length; i++) {
+            for (var j = 0; j < result.length; j++) {
 
                 // var movie = result[i];
 
@@ -117,20 +124,26 @@ function sendRequestSeries() {
 
                 // target.append(movieHtml);
 
-                var title = result[i]["name"];
-                var original_title = result[i]["original_name"];
-                var original_language = result[i]["original_language"];
-                var vote_average = result[i]["vote_average"];
+                var title = result[j]["name"];
+                var original_title = result[j]["original_name"];
+                var original_language = result[j]["original_language"];
+                var vote_average = result[j]["vote_average"];
+                var poster_path = result[j]["poster_path"];
                 var voteHalf = vote_average / 2;
                 var voteRound = Math.round(voteHalf);
-                var voteRoundForHandlebars = "";
+                var voteRoundFor = "";
                 var origLangImg =  '<img src="img/' + original_language + '.png" alt="' + original_language + '">';
+                var postPathImg = '<img src="https://image.tmdb.org/t/p/w185' + poster_path + '" alt="">'
+
+                console.log(poster_path);
+                console.log(postPathImg);
+                console.log(origLangImg);
 
                  
 
-                for(var k =1; k <= voteRound; k++) {
+                for(var a =1; a <= voteRound; a++) {
 
-                   voteRoundForHandlebars += '<i class="fas fa-star"></img>';
+                   voteRoundFor += '<i class="fas fa-star"></img>';
                 }
 
                 var listHtml = compiled({
@@ -138,7 +151,8 @@ function sendRequestSeries() {
                     "name": title,
                     "original_name": original_title,
                     "original_language": origLangImg,
-                    "vote_average": voteRoundForHandlebars
+                    "vote_average": voteRoundFor,
+                    "poster_path": postPathImg
                 })
 
 
@@ -164,3 +178,14 @@ function init() {
 }
 
 $(document).ready(init);
+
+
+// "poster_sizes": [
+//     "w92",
+//     "w154",
+//     "w185",
+//     "w342",
+//     "w500",
+//     "w780",
+//     "original"
+//   ],
