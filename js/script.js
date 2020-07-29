@@ -63,7 +63,7 @@ function sendRequest() {
                 // ADDS STARS ACCORDING TO VOTE
                 for(var k =1; k <= voteRound; k++) {
 
-                   voteRoundFor += '<i class="fas fa-star"></img>';
+                   voteRoundFor += '<i class="fas fa-star"></i>';
                 }
 
                 // VARIABLES SENT TO HANDLEBARS FOR TEMPLATE
@@ -139,7 +139,7 @@ function sendRequestSeries() {
                 // ADDS STARS ACCORDING TO VOTE
                 for(var a =1; a <= voteRound; a++) {
 
-                   voteRoundFor += '<i class="fas fa-star"></img>';
+                   voteRoundFor += '<i class="fas fa-star"></i>';
                 }
 
                 // VARIABLES SENT TO HANDLEBARS FOR TEMPLATE

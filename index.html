@@ -12,25 +12,27 @@
 
     <!-- SCRIPT HANDLEBARS MOVIES -->
     <script id="film-template" type="text/x-handlebars-template">
-        <div>{{{poster_path}}}</div>
         <ul>
             <li><span>Title: </span> {{ title }}</li>
+            <div>{{{poster_path}}}</div>
             <li><span>Original Title: </span> {{ original_title }}</li>
             <li><span>Language: </span> {{{ original_language }}} </li>
             <li><span>Vote: </span>{{{ vote_average }}}</li>
         </ul>
+        <hr>
 
     </script>
 
      <!-- SCRIPT HANDLEBARS TV-SERIES -->
     <script id="series-template" type="text/x-handlebars-template">
-        <div>{{{poster_path}}}</div>
         <ul>
             <li><span>Title: </span> {{ name }}</li>
+            <div>{{{poster_path}}}</div>
             <li><span>Original Title: </span> {{ original_name }}</li>
             <li><span>Language: </span> {{{ original_language }}} </li>
             <li><span>Vote: </span>{{{ vote_average }}}</li>
         </ul>
+        <hr>
     </script>
 
     <script src="js\script.js"></script>
