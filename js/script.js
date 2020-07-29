@@ -19,7 +19,7 @@ $(document).keydown(function () {
 })
 
 function sendRequest() {
-
+  
     var title = $("#input");
     var titleVal = title.val();
 
@@ -42,32 +42,31 @@ function sendRequest() {
 
             for (var i = 0; i < result.length; i++) {
 
-                // var movie = result[i];
-
-                // var movieHtml = compiled(movie);
-
-                // target.append(movieHtml);
-
+                // WHAT API RETURNS FOR EACH KEY
                 var title = result[i]["title"];
                 var original_title = result[i]["original_title"];
                 var original_language = result[i]["original_language"];
                 var vote_average = result[i]["vote_average"];
                 var poster_path = result[i]["poster_path"];
+
+                // SETS VOTE BASE FROM DECIMAL TO 5RADIX
                 var voteHalf = vote_average / 2;
                 var voteRound = Math.round(voteHalf);
                 var voteRoundFor = "";
+
+                // ADDS FLAG ACCORDING TO LANGUAGE
                 var origLangImg =  '<img src="img/' + original_language + '.png" alt="' + original_language + '">';
+
+                // ADDS POSTER TO MOVIE
                 var postPathImg = '<img src="https://image.tmdb.org/t/p/w185' + poster_path + '" alt="">'
 
-                console.log(poster_path);
-                console.log(postPathImg);
-                console.log(origLangImg);
-
+                // ADDS STARS ACCORDING TO VOTE
                 for(var k =1; k <= voteRound; k++) {
 
                    voteRoundFor += '<i class="fas fa-star"></img>';
                 }
 
+                // VARIABLES SENT TO HANDLEBARS FOR TEMPLATE
                 var listHtml = compiled({
 
                     "title": title,
@@ -118,34 +117,32 @@ function sendRequestSeries() {
 
             for (var j = 0; j < result.length; j++) {
 
-                // var movie = result[i];
-
-                // var movieHtml = compiled(movie);
-
-                // target.append(movieHtml);
-
+                // WHAT API RETURNS FOR EACH KEY
                 var title = result[j]["name"];
                 var original_title = result[j]["original_name"];
                 var original_language = result[j]["original_language"];
                 var vote_average = result[j]["vote_average"];
                 var poster_path = result[j]["poster_path"];
+
+                // SETS VOTE BASE FROM DECIMAL TO 5RADIX
                 var voteHalf = vote_average / 2;
                 var voteRound = Math.round(voteHalf);
                 var voteRoundFor = "";
+
+                // ADDS FLAG ACCORDING TO LANGUAGE
                 var origLangImg =  '<img src="img/' + original_language + '.png" alt="' + original_language + '">';
+
+                // ADDS POSTER TO SERIES
                 var postPathImg = '<img src="https://image.tmdb.org/t/p/w185' + poster_path + '" alt="">'
 
-                console.log(poster_path);
-                console.log(postPathImg);
-                console.log(origLangImg);
-
                  
-
+                // ADDS STARS ACCORDING TO VOTE
                 for(var a =1; a <= voteRound; a++) {
 
                    voteRoundFor += '<i class="fas fa-star"></img>';
                 }
 
+                // VARIABLES SENT TO HANDLEBARS FOR TEMPLATE
                 var listHtml = compiled({
 
                     "name": title,
