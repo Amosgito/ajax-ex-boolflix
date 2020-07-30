@@ -59,7 +59,7 @@ function sendRequest() {
                 var origLangImg =  '<img src="img/' + original_language + '.png" alt="' + original_language + '">';
 
                 // ADDS POSTER TO MOVIE
-                var postPathImg = '<img src="https://image.tmdb.org/t/p/w342' + poster_path + '" alt="">'
+                var postPathImg = '<img class="poster" src="https://image.tmdb.org/t/p/w342' + poster_path + '" alt="POSTER IMAGE">'
 
                 // ADDS STARS ACCORDING TO VOTE
                 for(var k =1; k <= voteRound; k++) {
@@ -136,7 +136,7 @@ function sendRequestSeries() {
                 var origLangImg =  '<img src="img/' + original_language + '.png" alt="' + original_language + '">';
 
                 // ADDS POSTER TO SERIES
-                var postPathImg = '<img src="https://image.tmdb.org/t/p/w342' + poster_path + '" alt="">'
+                var postPathImg = '<img class="poster" src="https://image.tmdb.org/t/p/w342' + poster_path + '" alt="POSTER IMAGE">'
 
                  
                 // ADDS STARS ACCORDING TO VOTE
