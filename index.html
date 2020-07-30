@@ -12,38 +12,30 @@
 
     <!-- SCRIPT HANDLEBARS MOVIES -->
     <script id="film-template" type="text/x-handlebars-template">
-        <div class="poster" style=“background-image:url(“{{{poster_path}}}“);“>
-        
-            <div class="list">
-                <ul>
-                    <li><span>Title: </span> {{ title }}</li>
-                    <li><span>Original Title: </span> {{ original_title }}</li>
-                    <li><span>Language: </span> {{{ original_language }}} </li>
-                    <li><span>Vote: </span>{{{ vote_average }}}</li>
-                    <li><span>Overview: </span>{{{ overview }}}</li>
-                </ul>
+        <ul>
+            <div>{{{poster_path}}}
+                <li><span>Title: </span> {{ title }}</li>
+                <li><span>Original Title: </span> {{ original_title }}</li>
+                <li><span>Language: </span> {{{ original_language }}} </li>
+                <li><span>Vote: </span>{{{ vote_average }}}</li>
+                <li><span>Overview: </span>{{{ overview }}}</li>
             </div>
-        </div>
+        </ul>
         
 
     </script>
 
      <!-- SCRIPT HANDLEBARS TV-SERIES -->
     <script id="series-template" type="text/x-handlebars-template">
-        
-            <div class="poster" style="background-image:url(" {{{ poster_path }}} ");">
-            
-                <div class="list">
-                    <ul>
-                        <li><span>Title: </span> {{ name }}</li>
-                        <li><span>Original Title: </span> {{ original_name }}</li>
-                        <li><span>Language: </span> {{{ original_language }}} </li>
-                        <li><span>Vote: </span>{{{ vote_average }}}</li>
-                        <li><span>Overview: </span>{{{ overview }}}</li>
-                    </ul>
-                </div>
+        <ul>
+            <div>{{{poster_path}}}
             </div>
-    
+            <li><span>Title: </span> {{ name }}</li>
+            <li><span>Original Title: </span> {{ original_name }}</li>
+            <li><span>Language: </span> {{{ original_language }}} </li>
+            <li><span>Vote: </span>{{{ vote_average }}}</li>
+            <li><span>Overview: </span>{{{ overview }}}</li>
+        </ul>
         
     </script>
 
