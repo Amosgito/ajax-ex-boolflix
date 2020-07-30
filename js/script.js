@@ -25,7 +25,7 @@ function sendRequest() {
 
     var template = $('#film-template').html();
     var compiled = Handlebars.compile(template);
-    var target = $('#append-list');
+    var target = $('#append-list-movies');
     target.html("");
 
     $.ajax({
@@ -59,7 +59,7 @@ function sendRequest() {
                 var origLangImg =  '<img src="img/' + original_language + '.png" alt="' + original_language + '">';
 
                 // ADDS POSTER TO MOVIE
-                var postPathImg = '<img class="poster" src="https://image.tmdb.org/t/p/w342' + poster_path + '" alt="POSTER IMAGE">'
+                var postPathImg = '<img class="poster" src="https://image.tmdb.org/t/p/w342' + poster_path + '" alt="POSTER IMAGE MISSING">'
 
                 // ADDS STARS ACCORDING TO VOTE
                 for(var k =1; k <= voteRound; k++) {
@@ -102,7 +102,7 @@ function sendRequestSeries() {
 
     var template = $('#series-template').html();
     var compiled = Handlebars.compile(template);
-    var target = $('#append-list');
+    var target = $('#append-list-series');
     target.html("");
 
     $.ajax({
@@ -136,7 +136,7 @@ function sendRequestSeries() {
                 var origLangImg =  '<img src="img/' + original_language + '.png" alt="' + original_language + '">';
 
                 // ADDS POSTER TO SERIES
-                var postPathImg = '<img class="poster" src="https://image.tmdb.org/t/p/w342' + poster_path + '" alt="POSTER IMAGE">'
+                var postPathImg = '<img class="poster" src="https://image.tmdb.org/t/p/w342' + poster_path + '" alt="POSTER IMAGE MISSING">'
 
                  
                 // ADDS STARS ACCORDING TO VOTE

@@ -20,6 +20,26 @@ body {
     flex-direction: column;
 }
 
+.container h2 {
+    margin-top: 50px;
+}
+
+.input {
+
+    height: 30px;
+}
+
+input {
+
+    width: 200px;
+}
+
+.input input,
+.input button {
+
+    height: 100%;
+}
+
 .inner {
 
     height: 70px;
@@ -41,9 +61,9 @@ body {
 
     color: white;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    margin: 50px;
+    margin: 20px;
 }
 
 
@@ -62,17 +82,18 @@ body {
 .card {
 
     position: relative;   
-    margin: 50px auto;
+    margin: 30px 20px;
     width: 342px;
     height: 500px;
-    border: 3px solid darkgrey;
-    border-radius: 5px;
+    border: 2px solid rgb(100, 99, 99);
+    border-radius: 3px;
 }
 
 .poster {
 
     height: 100%;
     width: 100%;
+    border-radius: 3px;
 }
 
 
@@ -86,8 +107,8 @@ body {
     display: none;
     background-color: rgba(0, 0, 0, 0.8);
     padding: 20px;
-    overflow: hidden;
-    
+    overflow-y: scroll;
+    border-radius: 3px;
 }
 
 
