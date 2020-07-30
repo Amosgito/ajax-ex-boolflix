@@ -64,3 +64,24 @@ body {
     color: cadetblue;
 }
 
+.card {
+
+    width: 400px;
+    height: auto;
+    background-color: gray;
+    position: relative;
+}
+
+.poster {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.list {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
